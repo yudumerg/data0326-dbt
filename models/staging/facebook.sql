@@ -1,11 +1,10 @@
-
-with 
-source as (
-    select * from{{source('raw','adwords')}}
+with
+source as(
+    select * from {{source('raw','facebook')}}
 ),
 
 renamed as (
-    	select
+        	select
 		date_date,
 		paid_source,
 		campaign_key,

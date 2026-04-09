@@ -1,11 +1,11 @@
 
-with 
+with
 source as (
-    select * from{{source('raw','adwords')}}
+    select * from {{source('raw','bing')}}
 ),
 
 renamed as (
-    	select
+        	select
 		date_date,
 		paid_source,
 		campaign_key,
@@ -15,5 +15,4 @@ renamed as (
 		click
 	from source
 )
-
 select * from renamed
